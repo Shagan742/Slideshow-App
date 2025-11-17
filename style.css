@@ -1,9 +1,10 @@
 body {
     overflow-x: hidden;
     font-family: 'Century Gothic', sans-serif;
-    background-image: url('../img/geometry.jpg');
+    background-image: url('img/sunsetbg.avif');
     background-size: cover;
     background-attachment: fixed;
+    vertical-align: middle;
 }
 
 /* Main container for the slideshow and metadata */
@@ -11,15 +12,18 @@ body {
     padding: 25px; /* Increased padding for better spacing */
     max-width: 500px; /* Increased max-width for larger display */
     width: 90%; /* Keeps width responsive */
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+        border:2px solid #4792c5;
+
 }
 
 /* Holds the displayed photo */
 .photoHolder {
     width: 100%;
+    height:300px;
     text-align: center;
 }
 
@@ -27,17 +31,24 @@ body {
 .thumbnail {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 4px;
     /* Optional: Add shadow here */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+
 }
 
 /* Style for the title/banner */
 .banner {
     font-size: 2rem; /* Increased font size for better readability */
     font-weight: bold;
-    color: #333;
+    color: #cc5a5a;
     /* Optional: Customize the text color */
+
+    font-family: "Playwrite AU TAS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Style for the 'More Content' indicator */
@@ -59,12 +70,13 @@ body {
 
 /* Metadata container styling */
 .details {
-    border: 1px dashed #000;
+    border: 1px dashed #4792c5;
     padding: 15px;
-    background-color: #f8f9fa; /* Light background to distinguish from main area */
+    background-color: rgba(255, 255, 255, 0.6); /* Light background to distinguish from main area */
     border-radius: 4px;
-    color: #333;
-    font-size: 1rem; /* Slightly larger text for readability */
+    color: #cc5a5a;
+    font-size: 18px; /* Slightly larger text for readability */
+    font-weight:500;
 }
 
 /* Style for each paragraph in details */
@@ -76,16 +88,20 @@ body {
 Make it animate nicely. You'll need CSS3 for this */
 .rot90 {
     /* Add 90-degree rotation */
+    transform: rotate(90deg);
+    
 }
 
 /* Add CSS styles to rotate the element 180deg
 Make it animate nicely. You'll need CSS3 for this */
 .rot180 {
     /* Add 180-degree rotation */
+        transform: rotate(180deg);
 }
 
 /* Add CSS styles to rotate the element 270deg
 Make it animate nicely. You'll need CSS3 for this */
 .rot270 {
     /* Add 270-degree rotation */
+    transform: rotate(270deg);
 }

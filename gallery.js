@@ -12,8 +12,8 @@ $(document).ready(() => {
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
   $(".moreIndicator").on("click", () => {
-    $(".moreIndicator").toggle("rot90")
-    $(".moreIndicator").toggle("rot270")
+    $(".moreIndicator").toggleClass("rot90")
+    $(".moreIndicator").toggleClass("rot270")
     $(".details").slideToggle();
   })
   // Select the "Next Photo" button and add a click event to call showNextPhoto
@@ -66,12 +66,13 @@ function swapPhoto() {
 function showNextPhoto() {
   // Increment mCurrentIndex and call swapPhoto()
   mCurrentIndex++;
-  swapPhoto();
+
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
   if (mCurrentIndex > mImages.length) {
     mCurrentIndex = 0;
-    return;
   }
+
+    swapPhoto();
 }
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
@@ -82,8 +83,9 @@ function showPrevPhoto() {
   // Ensure it loops to the end if mCurrentIndex is less than 0
   if (mCurrentIndex < 0) {
     mCurrentIndex = mImages.length;
-    return;
   }
+
+    swapPhoto();
 }
 
 // Starter code for the timer function
